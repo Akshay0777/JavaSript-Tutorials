@@ -1,0 +1,348 @@
+<html>
+<head>
+    <title>Javascript Tutorials</title>
+    <script src="javascript.js"></script>       <!-- External javascript -->
+
+</head>
+<body>
+    <h1>Hello World</h1>
+    
+
+    <script>
+        // document.write("<h1>Welcome to tutorials</h1>")
+
+        // print in javascript
+        //******************* print in javascript *******************
+        document.write("Hello World!")
+
+        document.write("<br>")     // used for next line
+
+        alert("Hello Browser!")   //display alert with message after webpage open in browser
+
+        //******************* print in javascript end *******************
+        document.write("<br>")
+
+  
+        //******************* define variable *******************
+        document.write("<br> define variable :-<br>")
+
+        var a = 5
+        var b = 10
+        var c = a+b    //performing operations (+, -, *, /) on variables
+        document.write("a+b = "+c)
+
+        //******************* define variable end *******************
+        document.write("<br>")
+
+
+        //******************* STRING *******************
+        document.write("<br> STRING :-<br>")
+
+        var str = "javascript"
+        document.write("lenght of string : "+str.length,"<br>")      //get lenth of string
+        document.write("char at 4 position is : "+str.charAt(4),"<br>")   //item at 4th position
+        document.write("asci value of 4th position char : "+str.charCodeAt(4),"<br>")  //asci value of 4th position item
+        document.write("index of s char : "+str.indexOf('s'),"<br>")     //return item index
+
+        //******************* STRING end *******************
+        document.write("<br>")
+
+
+        //******************* condition check *******************
+
+        document.write("<br> condition check :-<br>")
+
+        var a = 10
+        var b = 20
+
+        document.write("a>b : ",a>b)
+        document.write("<br>")
+        document.write("a==b : ",a==b)
+        document.write("<br>")
+        document.write("a<b : "+a<b)
+
+        document.write("<br>")
+
+        //difference between == and ===
+        var a = 10
+        var b = "10"
+        document.write("a==b : ",a==b)        //it returns true because it does not consider datatype it only consider value
+        document.write("<br>")      //for next line in browser
+        document.write("a===b : ",a===b)       //it return false because it consider datatype of variable
+
+        //******************* condition check end *******************
+        document.write("<br>")
+
+
+        //******************* IF ELSE STATEMENT (NESTED) *******************
+
+        document.write("<br> If else statement :-<br>")
+
+        var a = 10
+        var b = 20
+        if (a>b){
+            document.write("a is grater than b")
+        }
+        else if(a == b){
+            document.write("a is equal to b")
+        }
+        else{
+            document.write("a is smaller than b")
+        }
+
+        //******************* IF ELSE STATEMENT (NESTED) end *******************
+        document.write("<br>")
+
+
+        //******************* SWITCH STATEMENT *******************
+
+        document.write("<br> Switch Statement :-<br>")
+
+        switch(10){
+            case 10:document.write("number is 10")
+                break
+            case 20:document.write("number is 20")
+                break
+        }
+
+        //******************* SWITCH STATEMENT end *******************
+        document.write("<br>")
+
+
+        //******************* WHILE LOOP *******************
+
+        document.write("<br> While Loop :-<br>")
+
+        var count = 0
+        while (count<5){
+            document.write(count)
+            count ++
+        }
+        document.write("<br>")
+
+        // DO WHILE LOOP
+        do{
+            document.write(count)
+            count ++
+        }while(count<10)
+
+        //******************* WHILE LOOP end *******************
+        document.write("<br>")
+
+
+        //******************* FOR LOOP *******************
+
+        document.write("<br> For Loop :-<br>")
+
+        for(var i = 0; i<5; i++){
+            document.write(i,"<br>")
+        }
+
+        //******************* FOR LOOP end *******************
+        document.write("<br>")
+
+
+        //******************* ARRAYS *******************
+
+        document.write("<br> Arrays :-<br>")
+
+        // way 1 of defining array
+        var array = new Array
+        array[0] = "I"
+        array[1] = "N"
+        array[2] = "D"
+        array[3] = "I"
+        array[4] = "A"
+        document.write(array)
+        document.write("<br>")
+        // way 2 of defining array
+        var arrays = new Array("A","R","P")
+        document.write(arrays)
+        document.write("<br>")
+        // way 3 of defining array
+        var arr = ["A","K"]
+        document.write(arr)
+
+        //******************* ARRAYS end *******************
+        document.write("<br>")
+
+  
+        //******************* SORTING ARRAY *******************
+
+        document.write("<br> Sorting Array :-<br>")
+
+        var num = [1,5,2,6,8,3]
+        document.write(num.sort())
+
+        //******************* SORTING ARRAY end *******************
+        document.write("<br>")
+
+
+        //******************* FUNCTION *******************
+
+        document.write("<br> Function :- <br>")
+
+        function sum(a,b){     // define function
+            var c = a+b
+            document.write(c)
+        }
+
+        sum(10,20)           // call function
+
+        //******************* FUNCTION end *******************
+        document.write("<br>")
+
+        </script>
+
+
+<!-- ******************* buttons with function ******************* -->
+    <p>Buttons with Functions :- </p>
+
+        <!-- button example -->
+        <button onclick="myfun()">eventbutton</button>
+        <br>
+        <br>
+        <!-- form example -->
+        <p>calculator :- </p>
+        <form name = "example">
+            <input type="text" name = "calculator" size = "20">
+            <input type="button" name="b1" value="calculate" onclick="cal()">
+            <input type="reset" name="b2" value="reset">
+            Answer : <input type="text" size="20" name="answer">
+        </form>
+        <br>
+        <!-- window location -->
+        <button type="button" onclick="urlopen()">Go to Google</button>
+        <script>
+
+
+        //first create button in html body tag, Here i created a button name eventbutton in above code
+        function myfun(){
+            document.write("Button is working well")
+        }
+
+        //form Example
+        function cal(){
+            document.example.answer.value = eval(document.example.calculator.value)
+        }
+
+        //window location
+        function urlopen(){
+            window.location="https://www.google.co.in/"
+        }
+    </script>
+<!-- ******************* buttons with function end ******************* -->
+    <br>
+
+<!-- ******************* Dialog box ******************* -->
+    <p>dailog box :-</p>
+
+    <input type="button" value="click to confirm" onclick="confirmation()"></input>
+    <input type="button" value="click to prompt" onclick="promptfun()"></input>
+    <input type="button" value="click to confirm" onclick="confirmation()"></input>
+
+    <br>
+    <br>
+
+    <script>
+        //confirmation function
+        function confirmation(){
+            var ans = confirm("If you want to see website click below ok button")
+            if (ans){
+                window.location="https://www.google.co.in/"
+                alert("welcome to google")
+            }
+            else{
+                alert("sorry! you clicked cancle button")
+            }
+        }
+
+        //prompt function
+        function promptfun(){
+            var str = prompt("what is your name?","enter your name")
+            alert("Nice to meet you "+str+"!")
+        }
+    </script>
+<!-- ******************* Dialog box end ******************* -->
+
+
+
+    <script>
+    // ******************* Math *******************
+
+        document.write("<br> Maths :- <br>")
+
+        var a = 10.99
+        var b = Math.floor(10.99)
+        var c = Math.round(10.99)
+        var d = Math.log(10.99)
+        document.write(b,"<br>")
+        document.write(c,"<br>")
+        document.write(d,"<br>")
+
+        // Max and Min value of array
+        var a = 4
+        document.write("max = ",Math.max(10,20,30),"<br>")
+        document.write("min = ",Math.min(10,20,30),"<br>")
+        document.write("power of 4^2 = ",Math.pow(4,2),"<br>")
+        document.write("square root = ",Math.sqrt(25),"<br>")
+        document.write("random value = ",Math.random(1,25),"<br>")
+
+
+    // ******************* Math ends *******************
+        document.write("<br>")
+
+    // ******************* Date *******************
+        document.write("<br> Date :- <br>")
+        document.write(Date() +"<br>")
+
+        var dt = new Date()                                                 // also we can change the values of date objects
+        document.write("getDay() : "+dt.getDay() +"<br>")                   // dt.setDay(29)
+        document.write("getFullYear() : "+dt.getFullYear() +"<br>")         // dt.setFullYear(2022)
+        document.write("getHours() : "+dt.getHours() +"<br>")               // dt.setHours(12)
+        document.write("getMonth() : "+dt.getMonth() +"<br>")               // dt.setMonth(7)
+        document.write("getSeconds() : "+dt.getSeconds() +"<br>")           // dt.setSeconds(40)
+        document.write("getMinutes() : "+dt.getMinutes() +"<br>")           // dt.setMinutes(15)
+
+
+    //<!-- ******************* Date ends ******************* -->
+    </script>
+
+
+
+
+<!-- ******************* Validation Forms ******************* -->
+<p>Validation Forms :- </p>
+
+
+    <form name = "Validation" onsubmit="return validatefun()">
+        Username: <input type="text" value = "" id="user"><span id="uname"></span> <br>
+        Password : <input type="password" value = "" id="pas"><span id="pass"> </span>  <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validatefun(){
+            var un = document.getElementById("user").value
+            var ps = document.getElementById("pas").value
+
+            if (un == ""){                //true if username is null
+                document.getElementById("uname").innerHTML="** Please enter Username"
+                return false
+            }
+            if (ps == ""){               //true if password is null
+                document.getElementById("pass").innerHTML="** Please enter Password"
+                return false
+            }
+            else{
+                alert("Form submitted successfully")
+                return true
+            }
+        }
+
+    </script>
+<!-- ******************* Validation Forms Ends ******************* -->
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+                TOPIC                               Line No.
+1)  Hello world in Javasript             -          15 - 22
+2)  Variable                             -          26 - 34
+3)  String                               -          38 - 47
+4)  conditions check (true or false)     -          51 - 73
+5)  If else statement                    -          77 - 93
+6)  switch satement                      -          97 - 108
+7)  While Loop                           -          112 - 129
+8)  For Loop                             -          133 - 141
+9)  Arrays                               -          145 - 166
+10)  Sorting Arrays                      -          170 - 177
+11)  Functions                           -          181 - 192
+12)  Buttons with Functions              -          198 - 234
+        subpoints :- 1) button with function
+                     2) simple calculator 
+                     3) Open url with button 
+13)  Dialog Box                          -          237 - 266
+14)  Maths                               -          271 - 292
+15)  Date                                -          295 - 308
+16)  Form Validation                     -          314 - 344
